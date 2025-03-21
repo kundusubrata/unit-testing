@@ -41,7 +41,7 @@ export const multiIndex = async (req: Request, res: Response): Promise<void> => 
   const request = await prismaClient.request.create({
     data: {
       a: result.data.a,
-      b: result.data.b,
+      b: result.data.a,
       result: multi,
       type: "Multiply"
     },
