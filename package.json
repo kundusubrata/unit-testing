@@ -1,0 +1,21 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "1-simple-test",
+    "2-simple-express-app",
+    "3-express-with-zod",
+    "4-express-vitest-prisma-1",
+    "5-express-vitest-prisma-2"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "generate:prisma": "cd 5-express-vitest-prisma-2 && npx prisma generate && cd ..",
+    "test:all": "npm run generate:prisma && npm run test --workspaces"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
